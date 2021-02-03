@@ -1,13 +1,14 @@
 const input = document.getElementById('input');
 const button = document.getElementById('submit');
+let list = document.getElementsByTagName('ul')[0];
 
 const showhidebtn = document.getElementById('showhide-btn');
 
 button.addEventListener('click', () => {
     let listItem = document.createElement('li');
-    let list = document.getElementsByTagName('ul')[0];
     listItem.textContent = input.value;
     list.appendChild(listItem);
+    // clears the input section at the end so it doesn't remain
     input.value = '';
 })
 
